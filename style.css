@@ -838,3 +838,17 @@ img {
     height: 180px;
   }
 }
+.view-project-btn {
+  display: inline-block;
+  margin: 12px 10px 0 0;
+  padding: 12px 18px;
+  background: #b6ff68;
+  color: #080b08 !important;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.view-project-btn:hover {
+  box-shadow: 0 0 18px #b6ff6870;
+}
