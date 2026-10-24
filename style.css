@@ -1118,3 +1118,36 @@ h1 {
     padding: 12px 16px;
   }
 }
+/* ===== PERSONAL BRAND BADGE ===== */
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  padding: 9px 14px;
+  border: 1px solid #b6ff6840;
+  border-radius: 50px;
+  background: #b6ff680b;
+  color: #c7d5bf;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #b6ff68;
+  box-shadow: 0 0 10px #b6ff68;
+}
+
+@media (max-width: 600px) {
+  .hero-badge {
+    font-size: 0.62rem;
+    letter-spacing: 0.6px;
+    padding: 8px 10px;
+  }
+}
