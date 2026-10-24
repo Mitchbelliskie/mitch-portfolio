@@ -1151,3 +1151,49 @@ h1 {
     padding: 8px 10px;
   }
 }
+/* ===== PREMIUM ABOUT SECTION ===== */
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.about-highlight {
+  padding: 22px;
+  background: linear-gradient(145deg, #151b15, #0d100d);
+  border: 1px solid #293329;
+  border-radius: 16px;
+  transition: transform 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.about-highlight:hover {
+  transform: translateY(-4px);
+  border-color: #b6ff6870;
+}
+
+.about-highlight span {
+  color: #b6ff68;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.about-highlight h3 {
+  margin: 14px 0 8px;
+  font-size: 1.05rem;
+}
+
+.about-highlight p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+}
