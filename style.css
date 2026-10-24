@@ -462,3 +462,114 @@ body {
 }
 
 
+/* NEON PROJECT CARDS UPGRADE */
+
+#projects {
+  padding: 65px 20px;
+}
+
+#projects > h2 {
+  color: #b6ff68;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-shadow: 0 0 15px #b6ff6840;
+  margin-bottom: 35px;
+}
+
+#projects article {
+  position: relative;
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 28px;
+  background: linear-gradient(145deg, #111811, #090c09);
+  border: 1px solid #b6ff6840;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px #00000060;
+  overflow: hidden;
+  transition: border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              transform 0.3s ease;
+}
+
+#projects article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #b6ff68;
+  box-shadow: 0 0 15px #b6ff68;
+}
+
+#projects article:hover {
+  border-color: #b6ff68;
+  box-shadow: 0 0 25px #b6ff6825,
+              inset 0 0 18px #b6ff6808;
+  transform: translateY(-5px);
+}
+
+#projects article h3 {
+  color: #b6ff68;
+  font-size: 1.5rem;
+  margin-top: 8px;
+}
+
+#projects article h4 {
+  color: #b6ff68;
+  margin-top: 24px;
+}
+
+#projects article p,
+#projects article li {
+  color: #d5dfd1;
+  line-height: 1.8;
+}
+
+#projects article .label {
+  color: #b6ff68;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+#projects article .project-status {
+  color: #b6ff68;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+#projects article ul {
+  padding-left: 22px;
+}
+
+#projects article li::marker {
+  color: #b6ff68;
+}
+
+#projects .circuit-diagram {
+  margin-top: 25px;
+  padding: 15px;
+  background: #080b08;
+  border: 1px solid #b6ff6830;
+  border-radius: 12px;
+}
+
+#projects .circuit-diagram img {
+  border: 1px solid #b6ff6840;
+}
+
+@media (max-width: 600px) {
+  #projects {
+    padding: 40px 14px;
+  }
+
+  #projects article {
+    padding: 22px 18px;
+  }
+
+  #projects article h3 {
+    font-size: 1.25rem;
+  }
+}
+
