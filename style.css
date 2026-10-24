@@ -573,3 +573,22 @@ body {
   }
 }
 
+/* FIX NAVIGATION TEXT VISIBILITY */
+
+.site-nav {
+  background: #080b08;
+  border-bottom: 1px solid #b6ff68;
+}
+
+.site-nav a,
+.site-nav a:visited {
+  color: #ffffff !important;
+  font-weight: 600;
+  opacity: 1;
+}
+
+.site-nav a:hover {
+  color: #b6ff68 !important;
+  text-shadow: 0 0 10px #b6ff68;
+}
+
