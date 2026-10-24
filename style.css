@@ -821,3 +821,20 @@ img {
     overflow-wrap: anywhere;
   }
 }
+/* CONSISTENT PROJECT IMAGE STYLING */
+#projects article img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 18px 0;
+  border: 1px solid #b6ff6840;
+  background: #101610;
+}
+
+@media (max-width: 600px) {
+  #projects article img {
+    height: 180px;
+  }
+}
