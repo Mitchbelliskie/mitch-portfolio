@@ -618,3 +618,35 @@ nav.site-nav a:visited {
   padding: 8px !important;
 }
 
+/* NAVIGATION FIX — KEEP GLOWING CARDS */
+
+nav.site-nav {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 99999 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  background: #080b08 !important;
+  padding: 16px !important;
+  border-bottom: 1px solid #b6ff68 !important;
+}
+
+nav.site-nav a {
+  color: #ffffff !important;
+  background: transparent !important;
+  -webkit-text-fill-color: #ffffff !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  margin: 0 8px !important;
+}
+
+nav.site-nav a:hover {
+  color: #b6ff68 !important;
+  -webkit-text-fill-color: #b6ff68 !important;
+  text-shadow: 0 0 10px #b6ff68 !important;
+}
+
