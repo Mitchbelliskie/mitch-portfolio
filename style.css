@@ -1325,3 +1325,57 @@ img:hover {
     transition: none;
   }
 }
+/* ===== AMBIENT NEON BACKGROUND ===== */
+
+body {
+  position: relative;
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 12%;
+  left: -100px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: #b6ff68;
+  opacity: 0.055;
+  filter: blur(85px);
+  pointer-events: none;
+  z-index: -1;
+  animation: ambientDrift 12s ease-in-out infinite alternate;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  right: -100px;
+  bottom: 8%;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: #65ffb0;
+  opacity: 0.035;
+  filter: blur(95px);
+  pointer-events: none;
+  z-index: -1;
+  animation: ambientDrift 16s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes ambientDrift {
+  from {
+    transform: translate3d(0, -20px, 0) scale(0.9);
+  }
+  to {
+    transform: translate3d(35px, 35px, 0) scale(1.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after {
+    animation: none;
+  }
+}
