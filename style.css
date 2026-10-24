@@ -795,3 +795,29 @@ img {
     overflow-wrap: anywhere;
   }
 }
+/* MOBILE PROJECT CARD FIX */
+@media (max-width: 600px) {
+  #projects article {
+    width: 100%;
+    max-width: 100%;
+    margin: 18px auto;
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  #projects article ul {
+    padding-left: 20px;
+  }
+
+  #projects article img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  #projects article a {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
