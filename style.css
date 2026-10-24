@@ -650,3 +650,112 @@ nav.site-nav a:hover {
   text-shadow: 0 0 10px #b6ff68 !important;
 }
 
+/* ===== ENGINEER PORTFOLIO UPGRADES ===== */
+
+/* 1. Subtle circuit-inspired background */
+body {
+  background-color: #080b08;
+  background-image:
+    radial-gradient(circle at 1px 1px, #b6ff6818 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+#hero {
+  background:
+    radial-gradient(circle at 50% 35%, #1c351c 0%, transparent 65%),
+    #080b08;
+}
+
+/* 2. Upgrade the About section */
+#about {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 65px 24px;
+  line-height: 1.9;
+}
+
+#about h2 {
+  color: #b6ff68;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  text-shadow: 0 0 12px #b6ff6830;
+}
+
+#about p {
+  color: #d5dfd1;
+  font-size: 1.04rem;
+}
+
+/* 3. Animated stats cards */
+.portfolio-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 18px;
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.stat-card {
+  padding: 24px 15px;
+  text-align: center;
+  background: #101610;
+  border: 1px solid #b6ff6850;
+  border-radius: 14px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #b6ff6825;
+}
+
+.stat-card strong {
+  display: block;
+  color: #b6ff68;
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.stat-card span {
+  color: #d5dfd1;
+  font-size: 0.9rem;
+}
+
+/* 4. Professional footer */
+footer {
+  margin-top: 50px;
+  padding: 28px 18px;
+  text-align: center;
+  background: #080b08;
+  border-top: 1px solid #b6ff6840;
+}
+
+footer p {
+  color: #a8b8a2;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+footer a {
+  color: #b6ff68;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-shadow: 0 0 10px #b6ff68;
+}
+
+/* Mobile spacing */
+@media (max-width: 600px) {
+  #about {
+    padding: 42px 18px;
+  }
+
+  .portfolio-stats {
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 18px 10px;
+  }
+}
