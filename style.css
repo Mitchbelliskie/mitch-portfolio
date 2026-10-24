@@ -1450,3 +1450,77 @@ h1 {
     animation: none;
   }
 }
+/* ===== PREMIUM PROJECT CARD INTERACTIONS ===== */
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    #b6ff6818,
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #b6ff68a0;
+  box-shadow: 0 14px 35px #00000050,
+              0 0 18px #b6ff6815;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.025);
+  filter: brightness(1.08);
+}
+
+/* Keyboard accessibility */
+.project-card:focus-within {
+  outline: 2px solid #b6ff68;
+  outline-offset: 3px;
+}
+
+/* Keep interactions comfortable on phones */
+@media (hover: none) {
+  .project-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .project-card:hover img {
+    transform: none;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-card img,
+  .project-card::before {
+    transition: none;
+  }
+}
