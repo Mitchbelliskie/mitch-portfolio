@@ -1379,3 +1379,74 @@ body::after {
     animation: none;
   }
 }
+/* ===== PREMIUM HERO ANIMATIONS ===== */
+
+@keyframes heroEnter {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes buttonEnter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading entrance + existing neon glow */
+h1 {
+  animation:
+    heroEnter 1s ease-out both,
+    premiumGlow 4s ease-in-out 1s infinite;
+}
+
+/* Badge enters gently */
+.hero-badge {
+  animation:
+    heroEnter 0.8s ease-out both,
+    heroFloat 4s ease-in-out 0.8s infinite;
+}
+
+/* CTA buttons appear one after another */
+.hero-actions .hero-btn {
+  animation: buttonEnter 0.8s ease-out 0.25s both;
+}
+
+.hero-actions .hero-link {
+  animation: buttonEnter 0.8s ease-out 0.45s both;
+}
+
+/* Smooth interactive hover */
+.hero-actions a {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease;
+}
+
+.hero-actions a:hover {
+  transform: translateY(-3px);
+}
+
+.hero-actions .hero-btn:hover {
+  box-shadow: 0 0 26px #b6ff6870;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  h1,
+  .hero-badge,
+  .hero-actions .hero-btn,
+  .hero-actions .hero-link {
+    animation: none;
+  }
+}
