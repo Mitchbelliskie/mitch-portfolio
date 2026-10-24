@@ -774,3 +774,24 @@ img {
   max-width: 100%;
   height: auto;
 }
+/* MOBILE TEXT IMPROVEMENTS */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  h1 {
+    line-height: 1.2;
+    overflow-wrap: break-word;
+  }
+
+  h2, h3 {
+    line-height: 1.35;
+    overflow-wrap: break-word;
+  }
+
+  p, li {
+    overflow-wrap: anywhere;
+  }
+}
