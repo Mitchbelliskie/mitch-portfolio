@@ -1217,3 +1217,89 @@ h1 {
   transform: translateY(-3px);
   box-shadow: 0 0 22px #b6ff6850;
 }
+/* ===== PREMIUM MOTION EFFECTS ===== */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gentle hero glow */
+@keyframes heroFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.hero-badge {
+  animation: heroFloat 4s ease-in-out infinite;
+}
+
+/* Animated section headings */
+section h2 {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+section h2:hover {
+  color: #b6ff68;
+  text-shadow: 0 0 18px #b6ff6835;
+}
+
+/* Smooth card entrance */
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card,
+.skill-card,
+.about-highlight {
+  animation: cardAppear 0.7s ease both;
+}
+
+/* Polished button movement */
+.view-project-btn,
+.hero-btn,
+.whatsapp-btn {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.view-project-btn:hover,
+.hero-btn:hover,
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 24px #b6ff6850;
+}
+
+/* Image hover effect */
+img {
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+img:hover {
+  filter: brightness(1.08);
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
