@@ -1,70 +1,325 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b08">
+  <meta name="description" content="Explore Mitch Bell's planned Automatic Night Light electronics project, including the circuit concept, components, working principle, and testing plan.">
   <title>Automatic Night Light | Mitch Bell</title>
   <link rel="stylesheet" href="style.css">
+
   <style>
     body { padding: 20px; }
-    .project-page { max-width: 850px; margin: 35px auto; }
-    .back-link { color: #b6ff68; text-decoration: none; }
-    .project-page h1, .project-page h2 { color: #b6ff68; }
-    .project-page p, .project-page li { line-height: 1.8; color: #d5dfd1; }
-    .project-page img { width: 100%; height: auto; border-radius: 12px; margin: 20px 0; }
-    .project-box { background: #101610; border: 1px solid #b6ff6850; border-radius: 14px; padding: 20px; margin: 20px 0; }
+
+    .project-page {
+      max-width: 900px;
+      margin: 35px auto;
+    }
+
+    .back-link {
+      color: #b6ff68;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    .project-page h1,
+    .project-page h2 { color: #b6ff68; }
+
+    .project-page h1 {
+      margin-top: 28px;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+    }
+
+    .project-page h2 { margin-top: 0; }
+
+    .project-page p,
+    .project-page li {
+      line-height: 1.8;
+      color: #d5dfd1;
+    }
+
+    .project-intro {
+      font-size: 1.08rem;
+      max-width: 750px;
+    }
+
+    .project-status {
+      display: inline-block;
+      padding: 7px 12px;
+      border: 1px solid #b6ff6870;
+      border-radius: 30px;
+      color: #b6ff68 !important;
+      background: #b6ff6810;
+      font-size: .85rem;
+      font-weight: 700;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0;
+    }
+
+    .project-tags span {
+      padding: 7px 11px;
+      border: 1px solid #293329;
+      border-radius: 8px;
+      color: #d5dfd1;
+      font-size: .85rem;
+    }
+
+    .project-page img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid #293329;
+      border-radius: 14px;
+      margin: 24px 0;
+    }
+
+    .project-box {
+      background: linear-gradient(145deg, #151b15, #0d100d);
+      border: 1px solid #293329;
+      border-radius: 16px;
+      padding: 24px;
+      margin: 22px 0;
+      transition: border-color .25s ease, transform .25s ease;
+    }
+
+    .project-box:hover { border-color: #b6ff6870; }
+
+    .project-box li { margin-bottom: 8px; }
+
+    .component-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .component-item {
+      padding: 16px;
+      background: #080b08;
+      border: 1px solid #293329;
+      border-radius: 12px;
+    }
+
+    .component-item h3 {
+      color: #b6ff68;
+      margin: 0 0 8px;
+      font-size: 1rem;
+    }
+
+    .component-item p {
+      margin: 0;
+      font-size: .92rem;
+    }
+
+    .note {
+      border-left: 3px solid #b6ff68;
+      padding: 12px 16px;
+      background: #b6ff680b;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .project-button {
+      display: inline-block;
+      margin: 12px 10px 0 0;
+      padding: 12px 18px;
+      border-radius: 9px;
+      background: #b6ff68;
+      color: #080b08 !important;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .project-button:hover {
+      box-shadow: 0 0 20px #b6ff6850;
+    }
+
+    .project-footer {
+      margin-top: 35px;
+      padding-top: 22px;
+      border-top: 1px solid #293329;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 14px; }
+      .project-page { margin: 20px auto; }
+      .project-box { padding: 18px; }
+      .component-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
+
 <body>
   <main class="project-page">
-    <a class="back-link" href="index.html#projects">← Back to Portfolio</a>
+
+    <a class="back-link" href="index.html#projects">
+      ← Back to Portfolio
+    </a>
+
+    <p class="project-status">● PLANNED / LEARNING PROJECT</p>
 
     <h1>Automatic Night Light</h1>
-    <p><strong>PROJECT STATUS:</strong> Planned / Learning Project</p>
-    <p>An electronics project designed to switch a light on automatically when the surroundings become dark and switch it off when there is enough light.</p>
 
-    <img src="https://i.ibb.co/YTZGhKmV/file-0000000038648211a5a237dd5a5ca704.png" alt="Automatic Night Light circuit design">
+    <p class="project-intro">
+      A practical electronics project exploring how a circuit can detect
+      changes in ambient light and automatically control a low-voltage
+      light source.
+    </p>
+
+    <div class="project-tags">
+      <span>Electronics</span>
+      <span>LDR Sensor</span>
+      <span>Transistor Switching</span>
+      <span>Prototyping</span>
+    </div>
+
+    <img
+      src="https://i.ibb.co/YTZGhKmV/file-0000000038648211a5a237dd5a5ca704.png"
+      alt="Circuit design reference for the planned automatic night light"
+      loading="lazy"
+    >
 
     <section class="project-box">
-      <h2>How It Works</h2>
-      <p>A light-dependent resistor (LDR) senses the surrounding light level. A transistor or switching circuit uses that signal to control the light. The exact switching behaviour depends on the circuit design.</p>
+      <h2>01. Project Overview</h2>
+      <p>
+        The goal is to develop a simple automatic lighting system that
+        responds to the amount of light in its surroundings. The project
+        will provide practical experience with sensors, electronic
+        components, circuit assembly, and troubleshooting.
+      </p>
+      <p class="note">
+        <strong>Current stage:</strong> Planning and learning. The circuit
+        has not yet been built or tested.
+      </p>
     </section>
 
     <section class="project-box">
-      <h2>Components</h2>
+      <h2>02. How It Works</h2>
+      <ol>
+        <li>
+          <strong>Light detection:</strong> A light-dependent resistor
+          (LDR) changes resistance as the surrounding light changes.
+        </li>
+        <li>
+          <strong>Signal control:</strong> The LDR and other components
+          form a sensing circuit that responds to the light level.
+        </li>
+        <li>
+          <strong>Switching:</strong> A transistor or suitable switching
+          stage controls current to the lamp or LED.
+        </li>
+        <li>
+          <strong>Automatic response:</strong> The circuit is designed
+          to turn the light on in darkness and off in brighter conditions.
+        </li>
+      </ol>
+      <p>
+        The exact operation depends on the final circuit arrangement and
+        component values.
+      </p>
+    </section>
+
+    <section class="project-box">
+      <h2>03. Components and Their Functions</h2>
+
+      <div class="component-grid">
+        <div class="component-item">
+          <h3>Light-dependent resistor</h3>
+          <p>Senses changes in ambient light by changing resistance.</p>
+        </div>
+
+        <div class="component-item">
+          <h3>Fixed resistors</h3>
+          <p>Help set circuit current and the sensor's switching response.</p>
+        </div>
+
+        <div class="component-item">
+          <h3>Transistor</h3>
+          <p>Acts as an electronic switch to control the light.</p>
+        </div>
+
+        <div class="component-item">
+          <h3>LED or low-voltage lamp</h3>
+          <p>Provides the light output when the circuit switches on.</p>
+        </div>
+
+        <div class="component-item">
+          <h3>Breadboard and jumper wires</h3>
+          <p>Allow temporary circuit assembly without soldering.</p>
+        </div>
+
+        <div class="component-item">
+          <h3>Low-voltage DC supply</h3>
+          <p>Provides power matched to the final circuit's requirements.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-box">
+      <h2>04. Planned Build Stages</h2>
+      <ol>
+        <li>Study the circuit diagram and identify each component.</li>
+        <li>Confirm component specifications and transistor pin connections.</li>
+        <li>Assemble the circuit on a breadboard using a suitable low-voltage supply.</li>
+        <li>Observe how the circuit responds to bright and dark conditions.</li>
+        <li>Record results, correct faults, and document any improvements.</li>
+      </ol>
+    </section>
+
+    <section class="project-box">
+      <h2>05. Testing and Troubleshooting Plan</h2>
       <ul>
-        <li>Light-dependent resistor (LDR)</li>
-        <li>Resistors</li>
-        <li>Transistor</li>
-        <li>LED or suitable low-voltage lamp</li>
-        <li>Breadboard and jumper wires</li>
-        <li>Suitable low-voltage DC power supply</li>
+        <li>Inspect wiring and component placement before applying power.</li>
+        <li>Verify supply voltage and polarity against the circuit design.</li>
+        <li>Check whether the LDR resistance changes with light.</li>
+        <li>Verify transistor type and pin connections using its datasheet.</li>
+        <li>Check for loose connections and incorrect resistor values.</li>
+        <li>Record whether the light switches at the expected conditions.</li>
+      </ul>
+      <p class="note">
+        Testing will use a suitable low-voltage DC supply. Do not connect
+        an experimental breadboard circuit directly to mains electricity.
+      </p>
+    </section>
+
+    <section class="project-box">
+      <h2>06. Learning Objectives</h2>
+      <ul>
+        <li>Understand the operation of an LDR sensor.</li>
+        <li>Learn the basics of transistor switching.</li>
+        <li>Develop breadboard assembly skills.</li>
+        <li>Practise systematic fault diagnosis.</li>
+        <li>Document an electronics project from planning to testing.</li>
       </ul>
     </section>
 
     <section class="project-box">
-      <h2>Project Goals</h2>
+      <h2>07. Future Improvements</h2>
       <ul>
-        <li>Understand how an LDR responds to light.</li>
-        <li>Learn transistor switching.</li>
-        <li>Build and test a basic automatic lighting circuit.</li>
-        <li>Practise safe circuit testing and fault diagnosis.</li>
+        <li>Add an adjustable light-sensitivity control.</li>
+        <li>Explore more efficient LED switching.</li>
+        <li>Compare the circuit's behaviour under different lighting conditions.</li>
+        <li>Document the completed build with photographs and measured results.</li>
       </ul>
     </section>
 
-    <section class="project-box">
-      <h2>Testing and Troubleshooting</h2>
-      <ul>
-        <li>Inspect component placement and wiring.</li>
-        <li>Check the supply voltage and polarity.</li>
-        <li>Test whether the LDR response changes with light.</li>
-        <li>Check transistor connections against the circuit diagram.</li>
-      </ul>
-    </section>
+    <div class="project-footer">
+      <a class="project-button" href="index.html#projects">
+        Explore More Projects ↗
+      </a>
+      <p>Designed for learning through practical electronics and experimentation.</p>
+      <a class="back-link" href="index.html#projects">
+        ← Return to all projects
+      </a>
+    </div>
 
-    <a class="back-link" href="index.html#projects">← Return to all projects</a>
   </main>
 </body>
-</html>
+  </html>
 
