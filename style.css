@@ -315,4 +315,110 @@ footer p {
   line-height: 2;
 }
 
+/* FUTURISTIC ENGINEER THEME */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #080b08;
+  color: #e8f5e8;
+}
+
+#hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 70px 20px;
+  background:
+    radial-gradient(ellipse at center, #183019 0%, #080b08 70%);
+  border-bottom: 1px solid #b6ff6840;
+}
+
+#hero h1 {
+  color: #b6ff68;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  text-shadow: 0 0 12px #b6ff6870;
+  animation: neonPulse 3s ease-in-out infinite alternate;
+}
+
+#hero h2 {
+  color: #d2e8c8;
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+#hero .label {
+  color: #b6ff68;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+}
+
+#hero a,
+#contact a,
+#projects article > a {
+  display: inline-block;
+  color: #080b08;
+  background: #b6ff68;
+  padding: 13px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: 0.25s ease;
+}
+
+#hero a:hover,
+#contact a:hover,
+#projects article > a:hover {
+  background: #d4ffab;
+  box-shadow: 0 0 22px #b6ff6870;
+  transform: translateY(-3px);
+}
+
+.skill-card,
+#projects article {
+  transition: transform 0.25s ease, border-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.skill-card:hover,
+#projects article:hover {
+  border-color: #b6ff68;
+  box-shadow: 0 0 18px #b6ff6818;
+  transform: translateY(-4px);
+}
+
+#about,
+#skills,
+#projects,
+#contact {
+  scroll-margin-top: 25px;
+}
+
+@keyframes neonPulse {
+  from {
+    text-shadow: 0 0 8px #b6ff6840;
+  }
+  to {
+    text-shadow: 0 0 24px #b6ff68a0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+
 
