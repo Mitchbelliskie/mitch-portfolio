@@ -1197,3 +1197,23 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+/* ===== WHATSAPP CONTACT BUTTON ===== */
+
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 13px 20px;
+  background: #b6ff68;
+  color: #080b08 !important;
+  border: 1px solid #b6ff68;
+  border-radius: 10px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 22px #b6ff6850;
+}
