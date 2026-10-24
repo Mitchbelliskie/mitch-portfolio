@@ -592,3 +592,29 @@ body {
   text-shadow: 0 0 10px #b6ff68;
 }
 
+/* STRONG NAVIGATION VISIBILITY FIX */
+
+nav.site-nav {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background-color: #080b08 !important;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+nav.site-nav a,
+nav.site-nav a:link,
+nav.site-nav a:visited {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #b6ff68 !important;
+  background: transparent !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  padding: 8px !important;
+}
+
