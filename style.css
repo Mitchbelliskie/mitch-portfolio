@@ -1524,3 +1524,334 @@ h1 {
     transition: none;
   }
 }
+/* =========================================
+   MITCH BELL — DARK BIOMEDICAL THEME
+   Safe visual overrides for the existing site
+   ========================================= */
+
+:root {
+  color-scheme: dark;
+  --bio-bg: #080d14;
+  --bio-panel: #111a26;
+  --bio-panel-hover: #162434;
+  --bio-text: #edf5ff;
+  --bio-muted: #a3b2c5;
+  --bio-accent: #42e8d4;
+  --bio-border: rgba(148, 178, 205, 0.18);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: var(--bio-bg) !important;
+  color: var(--bio-text) !important;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+body::before {
+  background:
+    radial-gradient(
+      ellipse at 15% 5%,
+      rgba(66, 232, 212, 0.09),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 90% 35%,
+      rgba(65, 130, 255, 0.08),
+      transparent 38%
+    );
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Navigation */
+
+.premium-nav,
+.site-nav {
+  background: rgba(8, 13, 20, 0.94) !important;
+  border-bottom: 1px solid var(--bio-border);
+  backdrop-filter: blur(14px);
+}
+
+.nav-logo,
+.nav-links a,
+.site-nav a {
+  color: var(--bio-text) !important;
+  transition: color 0.2s ease;
+}
+
+.nav-logo span,
+#hero h1 span {
+  color: var(--bio-accent) !important;
+}
+
+.nav-links a:hover,
+.site-nav a:hover {
+  color: var(--bio-accent) !important;
+}
+
+/* Hero */
+
+#hero {
+  position: relative;
+  isolation: isolate;
+  padding: 110px 24px 90px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  padding: 9px 14px;
+  border: 1px solid rgba(66, 232, 212, 0.3);
+  border-radius: 999px;
+  background: rgba(66, 232, 212, 0.07);
+  color: var(--bio-accent);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.status-dot {
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--bio-accent);
+  box-shadow: 0 0 12px rgba(66, 232, 212, 0.6);
+}
+
+#hero h1 {
+  color: var(--bio-text) !important;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+#hero > p,
+#about p,
+#skills p,
+#projects > p,
+#contact p {
+  color: var(--bio-muted);
+}
+
+.hero-btn,
+.hero-actions a,
+.view-project-btn {
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.hero-btn {
+  background: var(--bio-accent) !important;
+  color: #06120f !important;
+  border: 1px solid var(--bio-accent);
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.hero-btn:hover,
+.view-project-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Main sections */
+
+#about,
+#skills,
+#projects,
+#contact {
+  padding: 76px 24px;
+  scroll-margin-top: 85px;
+}
+
+#about h2,
+#skills h2,
+#projects h2,
+#contact h2 {
+  color: var(--bio-text) !important;
+  letter-spacing: -0.025em;
+}
+
+#about h2::after,
+#skills h2::after,
+#projects h2::after,
+#contact h2::after {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 3px;
+  margin-top: 12px;
+  border-radius: 5px;
+  background: var(--bio-accent);
+}
+
+/* About highlights and project cards */
+
+.about-highlight,
+#projects article,
+#skills article,
+#skills .skill-card {
+  background: linear-gradient(
+    145deg,
+    var(--bio-panel),
+    rgba(12, 20, 31, 0.96)
+  ) !important;
+  border: 1px solid var(--bio-border) !important;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16);
+}
+
+.about-highlight {
+  padding: 24px;
+}
+
+.about-highlight > span,
+#projects .label,
+#projects .project-status {
+  color: var(--bio-accent) !important;
+}
+
+#projects article {
+  overflow: hidden;
+  padding: 22px;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease;
+}
+
+#projects article:hover {
+  transform: translateY(-4px);
+  border-color: rgba(66, 232, 212, 0.48) !important;
+  background: var(--bio-panel-hover) !important;
+}
+
+#projects article h3,
+#projects article h4,
+.about-highlight h3 {
+  color: var(--bio-text) !important;
+}
+
+#projects article p,
+#projects article li,
+.about-highlight p {
+  color: var(--bio-muted);
+}
+
+#projects article img {
+  object-fit: cover;
+  border: 1px solid var(--bio-border);
+  border-radius: 12px !important;
+}
+
+/* Project links */
+
+.view-project-btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 15px;
+  border: 1px solid rgba(66, 232, 212, 0.45);
+  border-radius: 9px;
+  color: var(--bio-accent) !important;
+  text-decoration: none;
+}
+
+.view-project-btn:hover {
+  background: rgba(66, 232, 212, 0.1);
+}
+
+/* Contact and WhatsApp */
+
+#contact {
+  border-top: 1px solid var(--bio-border);
+  background: rgba(17, 26, 38, 0.5);
+}
+
+#contact a,
+.whatsapp-btn {
+  overflow-wrap: anywhere;
+}
+
+#contact .whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 12px 10px 12px 0;
+  padding: 13px 20px;
+  border: 1px solid var(--bio-accent);
+  border-radius: 10px;
+  background: var(--bio-accent);
+  color: #06120f !important;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+#contact .whatsapp-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Keyboard accessibility */
+
+a:focus-visible {
+  outline: 2px solid var(--bio-accent);
+  outline-offset: 4px;
+}
+
+/* Mobile layout */
+
+@media (max-width: 640px) {
+  #hero {
+    padding: 82px 20px 64px;
+  }
+
+  #hero h1 {
+    font-size: clamp(2.1rem, 9vw, 3.4rem);
+  }
+
+  #about,
+  #skills,
+  #projects,
+  #contact {
+    padding: 54px 18px;
+  }
+
+  #projects article {
+    padding: 17px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero-badge {
+    font-size: 0.68rem;
+    letter-spacing: 0.035em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
