@@ -1855,3 +1855,46 @@ a:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+/* Medical Tech Hero Enhancement */
+#hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 12, 25, 0.97) 0%,
+      rgba(5, 12, 25, 0.88) 48%,
+      rgba(5, 12, 25, 0.38) 100%
+    ),
+    url("medical-hero.png") center right / cover no-repeat;
+  border-bottom: 1px solid rgba(0, 220, 255, 0.25);
+}
+
+#hero h1 {
+  color: #ffffff;
+  text-shadow: 0 0 24px rgba(0, 220, 255, 0.18);
+}
+
+#hero p {
+  color: #cbd8e8;
+  line-height: 1.8;
+}
+
+#hero a {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#hero a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(0, 220, 255, 0.3);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  #hero {
+    background-position: 60% center;
+  }
+}
