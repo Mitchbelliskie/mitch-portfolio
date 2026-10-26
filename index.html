@@ -555,39 +555,6 @@ engineering solutions that support safer, more reliable healthcare.
   Email Me ↗
 </a>
 
-
-<footer>
-  <p>© 2026 Mitch Bell. Built with HTML & CSS.</p>
-</footer>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const items = document.querySelectorAll(
-    "section h2, section p, .project-card, .skill-card, .about-highlight"
-  );
-
-  items.forEach(function (item) {
-    item.classList.add("reveal-ready");
-  });
-
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("reveal-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.12
-  });
-
-  items.forEach(function (item) {
-    observer.observe(item);
-  });
-});
-</script>
-</script>
-
 <!-- SERVICES SECTION -->
 <section id="services" class="services-section">
   <div class="services-container">
@@ -637,3 +604,33 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </div>
 </section>
+<footer>
+  <p>© 2026 Mitch Bell. Built with HTML & CSS.</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(
+    "section h2, section p, .project-card, .skill-card, .about-highlight"
+  );
+
+  items.forEach(function (item) {
+    item.classList.add("reveal-ready");
+  });
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("reveal-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12
+  });
+
+  items.forEach(function (item) {
+    observer.observe(item);
+  });
+});
+</script>
