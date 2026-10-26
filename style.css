@@ -1912,3 +1912,42 @@ html {
   min-height: 500px;
   color: #ffffff;
 }
+/* ===== Professional Navbar Upgrade ===== */
+header,
+nav {
+  transition: all 0.3s ease;
+}
+
+header {
+  background: rgba(5, 14, 28, 0.94);
+  border-bottom: 1px solid rgba(0, 220, 255, 0.18);
+  backdrop-filter: blur(12px);
+}
+
+nav a {
+  color: #d7e7f5;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: #00e5ff;
+}
+
+nav a:focus-visible {
+  outline: 2px solid #00e5ff;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+}
