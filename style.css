@@ -1898,3 +1898,17 @@ html {
     background-position: 60% center;
   }
 }
+/* Medical hero background — final override */
+#hero {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 12, 25, 0.94),
+      rgba(3, 12, 25, 0.35)
+    ),
+    url("./file_00000000ee5881f69fb05bb24287bd4b.png")
+      center / cover no-repeat !important;
+
+  min-height: 500px;
+  color: #ffffff;
+}
